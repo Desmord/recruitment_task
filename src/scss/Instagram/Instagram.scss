@@ -1,0 +1,46 @@
+@import '../Settings/Settings.scss';
+
+$padding: 60px;
+$padding-small: 24px;
+$margin:24px;
+$border-radius: 200px;
+
+.instagram {
+    padding: $padding 0px;
+    color: $color-light;
+
+    &>div {
+        background-color: $color-green;
+        padding: calc($padding * 2) calc(($padding * 2) - 10px);
+    }
+
+    .headline {
+        @include font-instagram-hedline;
+        margin-bottom: $margin;
+    }
+
+    .instagram-tittle {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .instagram-button {
+        padding: calc($padding-small / 2) $padding-small;
+        margin-top: $margin;
+        background-color: $color-light;
+        border-radius: $border-radius;
+        color: $color-green;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 3px 0px $color-light;
+        }
+    }
+
+}
+
+@include for-tablet-big {
+    .instagram {
+        padding: calc($padding / 2) 0px;
+    }
+}

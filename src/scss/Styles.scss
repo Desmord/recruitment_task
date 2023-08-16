@@ -1,7 +1,10 @@
 @import './Reset/Reset.scss';
 @import "~bootstrap/scss/bootstrap";
+
 @import './Nav/Nav.scss';
+@import './Instagram/Instagram.scss';
 @import './Footer/Footer.scss';
+
 
 body {
     width: 100vw;
@@ -10,4 +13,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    font-family: 'Inter', sans-serif;
 }
