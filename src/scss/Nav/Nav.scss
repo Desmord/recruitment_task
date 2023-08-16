@@ -1,0 +1,144 @@
+@import '../Settings/Settings.scss';
+
+$offer-items-number: 4;
+
+$nav-height:24px;
+$nav-padding: 24px;
+$nav-desktop-gap: 48px;
+$nav-tablet-gap:10px;
+
+$nav-search-width: 174px;
+$nav-search-icon-size: 24px;
+$nav-search-input-size: 150px;
+$nav-phone-search-size: 400px;
+$nav-phone-search-input-size: 370px;
+
+$transision: all 0.5s ease-in-out;
+$transision-fast: all 0.3s ease-in-out;
+
+nav {
+    padding: $nav-padding 0px;
+
+    .items {
+        @include font-nav;
+        position: relative;
+        gap: $nav-desktop-gap;
+
+        a {
+            position: relative;
+        }
+
+        a:after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 0px;
+            height: 1px;
+            background-color: black;
+            transition: $transision-fast;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: $color-black;
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .offer {
+        position: relative;
+        overflow: hidden;
+        height: $nav-height;
+        transition: $transision-fast;
+
+        &:hover {
+            height: calc($offer-items-number * $nav-height);
+        }
+
+        a {
+            padding: 2px 0px;
+        }
+    }
+
+    .nav-search {
+        position: relative;
+        width: $nav-search-icon-size;
+        height: $nav-search-icon-size;
+        transition: $transision;
+        overflow: hidden;
+
+        &:hover {
+            width: $nav-search-width;
+
+            input {
+                left: -0px;
+            }
+        }
+
+        input,
+        img {
+            position: absolute;
+            display: grid;
+            place-content: center;
+        }
+
+        img {
+            right: 0px;
+            padding: 2px 0px 2px 5px;
+            width: $nav-search-icon-size;
+            aspect-ratio: 1/1;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input {
+            transition: $transision;
+            left: -$nav-search-input-size;
+            width: $nav-search-input-size;
+            border-radius: 5px;
+            border: 1px solid $color-grey;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $color-black;
+            }
+        }
+
+    }
+
+}
+
+
+@include for-tablet-medium {
+
+    nav {
+
+        .items {
+            gap: $nav-tablet-gap;
+        }
+
+        .nav-search {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: $nav-height;
+
+            &:hover {
+                width: $nav-phone-search-size;
+            }
+
+            input {
+                left: -$nav-phone-search-input-size;
+                width: $nav-phone-search-input-size;
+            }
+        }
+
+    }
+}

@@ -1,7 +1,12 @@
 @import './Reset/Reset.scss';
 @import "~bootstrap/scss/bootstrap";
-@import './Global/Global.scss';
+@import './Nav/Nav.scss';
 
-.myss{
-    background-color: red;
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }

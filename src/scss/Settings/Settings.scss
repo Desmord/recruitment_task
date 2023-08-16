@@ -1,0 +1,28 @@
+$color-dark: hsl(0, 0%, 7%);
+$color-grey: hsla(0, 0%, 0%, 0.1);
+$color-black: hsl(0, 0%, 7%);
+
+@mixin for-tablet-big {
+    @media (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-medium {
+    @media (max-width: 720px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin font-nav {
+    font-size: 14px;
+    color: $color-dark;
+    line-height: 150%;
+    letter-spacing: -1%;
+}
