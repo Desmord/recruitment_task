@@ -1,0 +1,81 @@
+@import '../Settings/Settings.scss';
+
+$footer-padding: 80px;
+$footer-button-border-radius:200px;
+$transision: all 0.3s ease-in-out;
+$font-size-phone: 14px;
+
+$line1-padding:62px;
+$line2-padding:62px;
+
+$line2-gap:48px;
+
+$line3-padding-top:120px;
+$line3-tablet-big-padding:60px;
+$line3-tablet-small-padding:30px;
+
+footer {
+    @include font-footer;
+    padding: $footer-padding;
+    background-color: black;
+
+    .footer-button {
+        padding: 12px 24px 14px 24px;
+        border-radius: $footer-button-border-radius;
+        background-color: $color-green;
+        transition: $transision;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color-green, 10);
+        }
+    }
+
+    .line-1 {
+        padding-bottom: $line1-padding;
+        border-bottom: 1px solid $color-light;
+    }
+
+    .line-2 {
+        padding-top: $line2-padding;
+
+        & div {
+            gap: $line2-gap;
+
+            a:hover {
+                text-shadow: 0px 0px 3px $color-light;
+            }
+        }
+
+    }
+
+    .line-3 {
+        padding-top: $line3-padding-top;
+    }
+}
+
+@include for-tablet-big {
+
+    footer {
+        .line-3 {
+            padding-top: $line3-tablet-big-padding;
+        }
+    }
+
+}
+
+@include for-tablet-medium {
+
+    footer {
+        font-size: $font-size-phone;
+
+        .line-3 {
+            padding-top: $line3-tablet-small-padding;
+
+            div {
+                padding: calc($line3-tablet-small-padding / 3);
+            }
+        }
+    }
+
+}
