@@ -15,7 +15,7 @@ $border-radius: 200px;
     }
 
     .headline {
-        @include font-instagram-hedline;
+        @include font-headline;
         margin-bottom: $margin;
     }
 

@@ -44,12 +44,12 @@ $color-green: hsl(141, 54%, 23%);
     letter-spacing: -1%;
 }
 
-@mixin font-instagram-hedline {
+@mixin font-headline {
     font-size: 40px;
     line-height: 120%;
 }
 
-@mixin font-offer-block-title {
+@mixin font-block-title {
     font-size: 48px;
     line-height: 115%;
 }

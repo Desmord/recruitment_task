@@ -1,0 +1,47 @@
+@import '../Settings/Settings.scss';
+
+.about-block {
+    background-color: $color-green;
+    color: $color-light;
+
+    &>div:nth-of-type(1) {
+        width: min(800px, 100%);
+    }
+
+    &>div:nth-of-type(2) {
+        padding: 64px;
+
+        .about-navi-small {
+            font-size: 12px;
+            padding-bottom: 16px;
+        }
+
+        .about-title {
+            @include font-block-title;
+            padding-bottom: 40px;
+
+            span {
+                font-family: 'Roboto', sans-serif;
+            }
+
+        }
+
+    }
+
+    .about-button {
+        padding: 12px 24px;
+        border-radius: 200px;
+        margin-top: 72px;
+        border: 1px solid $color-light;
+        transition: all 0.3s ease-in-out;
+
+        img {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.7);
+        }
+    }
+}
