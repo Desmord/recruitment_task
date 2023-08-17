@@ -17,7 +17,7 @@ $transision: all 0.5s ease-in-out;
 $transision-fast: all 0.3s ease-in-out;
 
 nav {
-    position: relative;
+    position: absolute;
     padding: $nav-padding;
 
     .items {
@@ -53,16 +53,18 @@ nav {
 
     .offer {
         position: relative;
+
         overflow: hidden;
         height: $nav-height;
         transition: $transision-fast;
 
         &:hover {
-            height: calc($offer-items-number * $nav-height);
+            height: calc(($offer-items-number * $nav-height) + 10px);
         }
 
         a {
-            padding: 2px 0px;
+            padding: 3px 5px;
+            background-color: white;
         }
     }
 
