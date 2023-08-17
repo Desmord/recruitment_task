@@ -1,0 +1,86 @@
+@import '../Settings/Settings.scss';
+
+
+.offer-block {
+    background-color: $color-light;
+
+    &>div:nth-of-type(1) {
+        padding-top: 110px;
+
+        & div:nth-of-type(1) {
+            color: $color-green;
+            font-size: 12px;
+            padding-bottom: 12px;
+        }
+
+        & div:nth-of-type(2) {
+            @include font-offer-block-title;
+
+            span {
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        & div:nth-of-type(3) {
+            @include font-footer;
+            padding-top: 33px;
+            padding-bottom: 96px;
+            color: $color-dark;
+        }
+    }
+
+    &>div:nth-of-type(2) {
+        padding-bottom: 160px;
+        gap: 64px;
+
+        &>div {
+            padding: 48px;
+            border-radius: 28px;
+            background-color: hsl(0, 0%, 100%);
+            transition: all 0.4s cubic-bezier(.47,2.02,.31,-0.36);
+
+            div:nth-of-type(1) {
+                @include font-offer-card-title;
+                padding-top: 32px;
+            }
+
+            div:nth-of-type(2) {
+                @include font-offer-casd-description;
+                padding-top: 12px;
+            }
+
+            div:nth-of-type(3) {
+                position: relative;
+                padding-top: 40px;
+                color: $color-green;
+                transition: all 0.2s ease-out;
+
+                img {
+                    padding-left: 5px;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    height: 1px;
+                    width: 100%;
+                    background-color: $color-green;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+
+            &:hover {
+                background-color: hsl(0, 0%, 95%);
+                transform: scale(1.1);
+            }
+
+        }
+    }
+
+}

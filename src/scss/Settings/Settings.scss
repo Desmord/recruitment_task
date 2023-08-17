@@ -1,12 +1,12 @@
 $color-dark: hsl(0, 0%, 7%);
 $color-grey: hsla(0, 0%, 0%, 0.1);
 $color-black: hsl(0, 0%, 7%);
-$color-light: hsl(27, 31%, 94%);
+$color-light: hsl(27, 29%, 94%);
 $color-green: hsl(141, 54%, 23%);
 
 
-@mixin for-desktop-small{
-    @media (max-width:1140px){
+@mixin for-desktop-small {
+    @media (max-width:1140px) {
         @content;
     }
 }
@@ -44,7 +44,24 @@ $color-green: hsl(141, 54%, 23%);
     letter-spacing: -1%;
 }
 
-@mixin font-instagram-hedline{
+@mixin font-instagram-hedline {
     font-size: 40px;
     line-height: 120%;
+}
+
+@mixin font-offer-block-title {
+    font-size: 48px;
+    line-height: 115%;
+}
+
+@mixin font-offer-card-title {
+    font-size: 28px;
+    line-height: 115%;
+    letter-spacing: -5%;
+}
+
+@mixin font-offer-casd-description {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -1%;
 }
