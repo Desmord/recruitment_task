@@ -19,6 +19,7 @@ $transision-fast: all 0.3s ease-in-out;
 nav {
     position: absolute;
     padding: $nav-padding;
+    z-index: 5;
 
     .items {
         @include font-nav;

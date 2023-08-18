@@ -2,6 +2,7 @@ $color-dark: hsl(0, 0%, 7%);
 $color-grey: hsla(0, 0%, 0%, 0.1);
 $color-black: hsl(0, 0%, 7%);
 $color-light: hsl(27, 29%, 94%);
+$color-crema: hsl(27, 41%, 77%);
 $color-green: hsl(141, 54%, 23%);
 
 
@@ -64,4 +65,9 @@ $color-green: hsl(141, 54%, 23%);
     font-size: 14px;
     line-height: 150%;
     letter-spacing: -1%;
+}
+
+@mixin font-hero-title {
+    font-size: 60px;
+    line-height: 70px;
 }
