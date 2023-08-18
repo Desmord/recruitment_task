@@ -1,0 +1,58 @@
+@import '../Settings/Settings.scss';
+
+.popup-gallery {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    color: $color-light;
+    z-index: 11;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+
+    .popup-close {
+        position: absolute;
+        top: 100px;
+        right: 150px;
+        font-size: 40px;
+        font-weight: 700;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            font-size: 50px;
+        }
+    }
+
+    #popup-img {
+        width: 400px;
+        box-shadow: 0px 0px 10px 2px hsla(0, 0%, 0%, 1);
+    }
+}
+
+@include for-tablet-big {
+    .popup-gallery {
+
+        .popup-close {
+            top: 75px;
+            right: 75px;
+        }
+    }
+}
+
+@include for-phone {
+    .popup-gallery {
+
+        .popup-close {
+            top: 25px;
+            right: 25px;
+        }
+
+        #popup-img {
+            width: 350px;
+        }
+    }
+}

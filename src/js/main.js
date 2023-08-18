@@ -74,3 +74,29 @@ import * as bootstrap from 'bootstrap'
 
 
 
+(() => {
+
+    const gridItems = document.querySelectorAll(`.grid-item`);
+    const popupImg = document.querySelector(`#popup-img`);
+    const popupGallery = document.querySelector(`.popup-gallery`);
+    const closePopup = document.querySelector(`.popup-close`);
+
+    const handleGridItemClick = (imgSrc) => {
+        popupImg.setAttribute(`src`, imgSrc)
+        popupGallery.style.opacity = `1`;
+        popupGallery.style.pointerEvents = `all`;
+    }
+
+    const handleClosePopupClick = () => {
+        popupGallery.style.opacity = `0`;
+        popupGallery.style.pointerEvents = `none`;
+    }
+
+    [...gridItems].map(item =>
+        item.addEventListener(`click`, () => handleGridItemClick(item.getAttribute(`data-img-src`))))
+
+    closePopup.addEventListener(`click`, handleClosePopupClick)
+
+
+})();
+
