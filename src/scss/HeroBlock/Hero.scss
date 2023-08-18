@@ -51,7 +51,7 @@ $hero-button-raduis: 200px;
 
         &:hover {
             color: $color-light;
-            box-shadow: inset 200px 0 0 0 lighten($color-green, 15);
+            box-shadow: inset 440px 0 0 0 lighten($color-green, 15);
         }
     }
 
@@ -67,7 +67,7 @@ $hero-button-raduis: 200px;
         }
 
         &:hover {
-            box-shadow: inset 240px 0 0 0 lighten($color-crema, 5);
+            box-shadow: inset 440px 0 0 0 lighten($color-crema, 5);
         }
 
     }

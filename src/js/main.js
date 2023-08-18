@@ -47,4 +47,30 @@ import * as bootstrap from 'bootstrap'
     sliderLeftButton.addEventListener(`click`, handleClickLeft)
     sliderRightButton.addEventListener(`click`, handleClickRight)
 
-})()
+})();
+
+(() => {
+    let elem = document.querySelector('.grid');
+    let msnry = new Masonry(elem, {
+        itemSelector: '.grid-item',
+        columnWidth: 320
+    });
+})();
+
+(() => {
+
+    const showMore = document.querySelector(`#show-more`);
+    const opacityFiltr = document.querySelector(`#opacity-filtr`);
+    const container = document.querySelector(`#implementations`)
+
+    showMore.addEventListener(`click`, () => {
+        container.setAttribute(`style`, `overflow: visible;height: auto`);
+        showMore.style.display = 'none';
+        opacityFiltr.style.display = `none`;
+    })
+
+
+})();
+
+
+
