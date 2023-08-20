@@ -25,9 +25,9 @@
             height: 100%;
         }
 
-        &:hover{
+        &:hover {
             cursor: pointer;
-            filter: drop-shadow(0px 0px 5px hsla(0,0%,0%,0.7));
+            filter: drop-shadow(0px 0px 5px hsla(0, 0%, 0%, 0.7));
         }
     }
 
@@ -93,5 +93,7 @@
         }
     }
 
-
+    #masonry-container{
+        margin: 0 auto;
+    }
 }

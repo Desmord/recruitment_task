@@ -11,6 +11,9 @@
 @import './Footer/Footer.scss';
 @import './Slider/Slider.scss';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     width: 100vw;
