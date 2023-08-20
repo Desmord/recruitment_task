@@ -3,7 +3,7 @@
 .implementations {
     position: relative;
     background-color: $color-crema;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     height: 1000px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
@@ -16,6 +16,7 @@
     .grid-item {
         width: 300px;
         height: 250px;
+        padding: 5px;
         margin-top: 20px;
         transition: all 0.2s ease-in-out;
 

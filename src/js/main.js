@@ -49,6 +49,7 @@ import * as bootstrap from 'bootstrap'
 
 })();
 
+// Masonry
 (() => {
     let elem = document.querySelector('.grid');
     let msnry = new Masonry(elem, {
@@ -57,6 +58,8 @@ import * as bootstrap from 'bootstrap'
     });
 })();
 
+
+// Gellery show more
 (() => {
 
     const showMore = document.querySelector(`#show-more`);
@@ -64,16 +67,15 @@ import * as bootstrap from 'bootstrap'
     const container = document.querySelector(`#implementations`)
 
     showMore.addEventListener(`click`, () => {
-        container.setAttribute(`style`, `overflow: visible;height: auto`);
+        container.setAttribute(`style`, `overflow: visible; height: auto`);
         showMore.style.display = 'none';
         opacityFiltr.style.display = `none`;
     })
 
-
 })();
 
 
-
+// Gallery and popup events
 (() => {
 
     const gridItems = document.querySelectorAll(`.grid-item`);
